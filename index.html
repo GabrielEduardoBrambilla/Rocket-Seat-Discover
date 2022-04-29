@@ -4,136 +4,182 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Practice</title>
   </head>
   <body>
-    <form
-      action="index.html"
-      id="main_form"
-      enctype="multipart/form-data"
-      method="POST"
-    >
-      <label
-        >Name
+    <div class="form">
+      <form
+        action="index.html"
+        id="main_form"
+        enctype="multipart/form-data"
+        method="POST"
+      >
+        <h1>Big Form</h1>
+        <label>
+          Name
+          <input
+            type="text"
+            autofocus
+            placeholder="Type your name"
+            list="names"
+          />
+        </label>
+        <br />
+        <br />
+        <label
+          >Color <input type="color" placeholder="Select your favorite color" />
+        </label>
+        <br />
+        <br />
+        <label
+          >Poem
+          <input type="textarea" placeholder="Type the best poem u know" />
+        </label>
+        <br />
+        <br />
+        <label>
+          Search<input
+            type="search"
+            name="search"
+            pattern="[0-9]{2}"
+            maxlength="2"
+            title="Just two digits numbers"
+            placeholder="Search your id"
+          />
+        </label>
+        <br />
+        <br />
+        Hidden
         <input
           type="text"
-          autofocus
-          placeholder="Type your name"
-          list="names"
+          placeholder="Hidden doesnt show up"
+          title="Hidden does not show on screen and screen readers will not read them"
+          aria-label="Aria-label is used when u dont have a label and still port your web site for a screen reader"
         />
-      </label>
-      <label
-        >Color <input type="color" placeholder="Select your favorite color" />
-      </label>
-      <label
-        >Poem <input type="textarea" placeholder="Type the best poem u know" />
-      </label>
+        <br />
+        <br />
+        <label>
+          Radio: lets have a coffe?
+          <label>
+            Yes<input type="radio" value="yes" id="radio_yes" name="coffe" />
+          </label>
+          <label>
+            No<input
+              type="radio"
+              checked
+              value="no"
+              id="radio_no"
+              name="coffe"
+            />
+          </label>
+        </label>
+        <br />
+        <br />
+        <label>
+          E-mail
+          <input
+            type="email"
+            autocomplete="email"
+            placeholder="Type your best E-mail"
+          />
+        </label>
+        <br />
+        <br />
+        <label>
+          Checkbox: Newsletter
+          <input type="checkbox" placeholder="" />
+        </label>
+        <br />
+        <br />
+        <label>
+          Password
+          <input type="password" placeholder="" />
+        </label>
+        <br />
+        <br />
+        <label>
+          Url
+          <input
+            type="url"
+            title="Type your favorite stream platform"
+            placeholder="www.netflix.com"
+            pattern=".*\.com\.*"
+          />
+        </label>
+        <br />
+        <br />
+        <label>
+          Number
+          <input type="number" placeholder="" />
+        </label>
+        <br />
+        <br />
+        <label>
+          Range
+          <input type="range" min="-50" max="50" step="2" />
+        </label>
+        <br />
+        <br />
+        <label>
+          Select: select a car model
+          <select name="car_select" id="car_select">
+            <option value="Hilux">Hilux</option>
+            <option value="Corola">Corola</option>
+            <option value="Jetta" selected>Jetta</option>
+            <option value="Audi A5">Audi A5</option>
+          </select>
+        </label>
+        <br />
+        <br />
+        <label>
+          Select Optgroup: select a pet
+          <select name="pet_select" id="pet_select">
+            <optgroup label="Dog pets">
+              <option value="Pitbull">Pitbull</option>
+              <option value="Border Collie">Border Collie</option>
+              <option value="German Shepherd">German Shepherd</option>
+              <option value="Doberman">Doberman</option>
+            </optgroup>
+            <optgroup label="Cat pets">
+              <option value="Naked Cat">Naked Cat</option>
+              <option value="Garfield">Garfiel</option>
+              <option value="Siamese">Siamese</option>
+              <option value="Persian">Persian</option>
+            </optgroup>
+          </select>
+        </label>
+        <br />
+        <br />
+        <label>
+          Image
+          <input type="file" accept="image/*" placeholder="Choose a good pic" />
+        </label>
+        <br />
+        <br />
+        <label>
+          Data and Time
+          <input type="datetime-local" placeholder="Select data and time" />
+        </label>
+        <br />
+        <br />
+        <button type="submit">Submit form</button>
+      </form>
       <br />
-      <label>
-        Search<input
-          type="search"
-          name="search"
-          pattern="[0-9]{2}"
-          maxlength="2"
-          title="Just two digits numbers"
-          placeholder="Search your id"
-        />
-      </label>
-      Hidden
+      <br />
+      <br />
+      Out side input
       <input
         type="text"
-        placeholder="Hidden doesnt show up"
-        title="Hidden does not show on screen and screen readers will not read them"
-        aria-label="Aria-label is used when u dont have a label and still port your web site for a screen reader"
+        name="outside_text"
+        form="main_form"
+        id="out_input"
+        required
       />
       <br />
-      <label>
-        Radio: lets have a coffe?
-        <label>
-          Yes<input type="radio" value="yes" id="radio_yes" name="coffe" />
-        </label>
-        <label>
-          No<input type="radio" checked value="no" id="radio_no" name="coffe" />
-        </label>
-      </label>
       <br />
-      <label>
-        E-mail
-        <input
-          type="email"
-          autocomplete="email"
-          placeholder="Type your best E-mail"
-        />
-      </label>
-      <label>
-        Checkbox: Newsletter
-        <input type="checkbox" placeholder="" />
-      </label>
-      <label>
-        Password
-        <input type="password" placeholder="" />
-      </label>
-      <br />
-      <label
-        >Url
-        <input
-          type="url"
-          title="Type your favorite stream platform"
-          placeholder="www.netflix.com"
-          pattern=".*\.com\.*"
-        />
-      </label>
-      <label>Number <input type="number" placeholder="" /></label>
-      <label>
-        Range
-        <input type="range" min="-50" max="50" step="2" />
-      </label>
-      <br />
-      <label>
-        Select: select a car model
-        <select name="car_select" id="car_select">
-          <option value="Hilux">Hilux</option>
-          <option value="Corola">Corola</option>
-          <option value="Jetta" selected>Jetta</option>
-          <option value="Audi A5">Audi A5</option>
-        </select>
-      </label>
-      <label>
-        Select Optgroup: select a pet
-        <select name="pet_select" id="pet_select">
-          <optgroup label="Dog pets">
-            <option value="Pitbull">Pitbull</option>
-            <option value="Border Collie">Border Collie</option>
-            <option value="German Shepherd">German Shepherd</option>
-            <option value="Doberman">Doberman</option>
-          </optgroup>
-          <optgroup label="Cat pets">
-            <option value="Naked Cat">Naked Cat</option>
-            <option value="Garfield">Garfiel</option>
-            <option value="Siamese">Siamese</option>
-            <option value="Persian">Persian</option>
-          </optgroup>
-        </select>
-      </label>
-      <label>
-        Image
-        <input type="file" accept="image/*" placeholder="Choose a good pic" />
-      </label>
-      <label
-        >Data and Time
-        <input type="datetime-local" placeholder="Select data and time"
-      /></label>
-      <br />
-      <button type="submit">Submit form</button>
-    </form>
-    Out side input
-    <input
-      type="text"
-      name="outside_text"
-      form="main_form"
-      id="out_input"
-      required
-    />
+    </div>
+
     <!-- required makes mandatory to fill the input u put it on  -->
 
     <datalist id="names">

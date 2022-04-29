@@ -1,0 +1,15 @@
+.form{
+  border-radius: 1vw;
+  border: 0.5vw solid black;
+  color: black;
+  margin: auto;
+  width: 25vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  align-items: center;
+  
+}
+#main_form{
+  padding: 5vh;
+  background-color: WHITE;
+  width: auto;
+}
