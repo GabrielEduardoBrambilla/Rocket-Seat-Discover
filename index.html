@@ -7,7 +7,12 @@
     <title>Practice</title>
   </head>
   <body>
-    <form action="index.html" id="main_form" method="POST">
+    <form
+      action="index.html"
+      id="main_form"
+      enctype="multipart/form-data"
+      method="POST"
+    >
       <label
         >Name
         <input
@@ -60,19 +65,68 @@
           placeholder="Type your best E-mail"
         />
       </label>
-      <label>Checkbox <input type="checkbox" placeholder="" /></label>
-      <label>Password <input type="password" placeholder="" /></label>
+      <label>
+        Checkbox: Newsletter
+        <input type="checkbox" placeholder="" />
+      </label>
+      <label>
+        Password
+        <input type="password" placeholder="" />
+      </label>
       <br />
-      <label>Url <input type="url" placeholder="" /></label>
+      <label
+        >Url
+        <input
+          type="url"
+          title="Type your favorite stream platform"
+          placeholder="www.netflix.com"
+          pattern=".*\.com\.*"
+        />
+      </label>
       <label>Number <input type="number" placeholder="" /></label>
-      <label>Range <input type="range" placeholder="" /></label>
+      <label>
+        Range
+        <input type="range" min="-50" max="50" step="2" />
+      </label>
       <br />
-      <label>Select<input type="select" placeholder="" /></label>
-      <label>Image <input type="file" accept="image/*" placeholder="" /></label>
-      <label>Data and Time <input type="datetime" placeholder="" /></label>
+      <label>
+        Select: select a car model
+        <select name="car_select" id="car_select">
+          <option value="Hilux">Hilux</option>
+          <option value="Corola">Corola</option>
+          <option value="Jetta" selected>Jetta</option>
+          <option value="Audi A5">Audi A5</option>
+        </select>
+      </label>
+      <label>
+        Select Optgroup: select a pet
+        <select name="pet_select" id="pet_select">
+          <optgroup label="Dog pets">
+            <option value="Pitbull">Pitbull</option>
+            <option value="Border Collie">Border Collie</option>
+            <option value="German Shepherd">German Shepherd</option>
+            <option value="Doberman">Doberman</option>
+          </optgroup>
+          <optgroup label="Cat pets">
+            <option value="Naked Cat">Naked Cat</option>
+            <option value="Garfield">Garfiel</option>
+            <option value="Siamese">Siamese</option>
+            <option value="Persian">Persian</option>
+          </optgroup>
+        </select>
+      </label>
+      <label>
+        Image
+        <input type="file" accept="image/*" placeholder="Choose a good pic" />
+      </label>
+      <label
+        >Data and Time
+        <input type="datetime-local" placeholder="Select data and time"
+      /></label>
       <br />
       <button type="submit">Submit form</button>
     </form>
+    Out side input
     <input
       type="text"
       name="outside_text"
