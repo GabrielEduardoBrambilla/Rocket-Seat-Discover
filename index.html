@@ -7,32 +7,80 @@
     <title>Practice</title>
   </head>
   <body>
-    <form action="index.html" method="POST">
-      <label>
-        <input type="text" placeholder="Type your name" list="names" />
+    <form action="index.html" id="main_form" method="POST">
+      <label
+        >Name
+        <input
+          type="text"
+          autofocus
+          placeholder="Type your name"
+          list="names"
+        />
       </label>
       <label
-        ><input type="color" placeholder="Select your favorite color"
-      /></label>
+        >Color <input type="color" placeholder="Select your favorite color" />
+      </label>
       <label
-        ><input type="textarea" placeholder="Type the best poem u know"
-      /></label>
-      <label
-        ><input type="search" placeholder="Search what u are thinking"
-      /></label>
-      <label> <input type="hidden" placeholder="" /></label>
-      <label> <input type="radio" placeholder="" /></label>
-      <label> <input type="email" placeholder="" /></label>
-      <label> <input type="checkbox" placeholder="" /></label>
-      <label> <input type="password" placeholder="" /></label>
-      <label> <input type="url" placeholder="" /></label>
-      <label> <input type="number" placeholder="" /></label>
-      <label> <input type="range" placeholder="" /></label>
-      <label> <input type="select" placeholder="" /></label>
-      <label> <input type="file" placeholder="" /></label>
-      <label> <input type="datetime" placeholder="" /></label>
-      <button type="submit">Send</button>
+        >Poem <input type="textarea" placeholder="Type the best poem u know" />
+      </label>
+      <br />
+      <label>
+        Search<input
+          type="search"
+          name="search"
+          pattern="[0-9]{2}"
+          maxlength="2"
+          title="Just two digits numbers"
+          placeholder="Search your id"
+        />
+      </label>
+      Hidden
+      <input
+        type="text"
+        placeholder="Hidden doesnt show up"
+        title="Hidden does not show on screen and screen readers will not read them"
+        aria-label="Aria-label is used when u dont have a label and still port your web site for a screen reader"
+      />
+      <br />
+      <label>
+        Radio: lets have a coffe?
+        <label>
+          Yes<input type="radio" value="yes" id="radio_yes" name="coffe" />
+        </label>
+        <label>
+          No<input type="radio" checked value="no" id="radio_no" name="coffe" />
+        </label>
+      </label>
+      <br />
+      <label>
+        E-mail
+        <input
+          type="email"
+          autocomplete="email"
+          placeholder="Type your best E-mail"
+        />
+      </label>
+      <label>Checkbox <input type="checkbox" placeholder="" /></label>
+      <label>Password <input type="password" placeholder="" /></label>
+      <br />
+      <label>Url <input type="url" placeholder="" /></label>
+      <label>Number <input type="number" placeholder="" /></label>
+      <label>Range <input type="range" placeholder="" /></label>
+      <br />
+      <label>Select<input type="select" placeholder="" /></label>
+      <label>Image <input type="file" accept="image/*" placeholder="" /></label>
+      <label>Data and Time <input type="datetime" placeholder="" /></label>
+      <br />
+      <button type="submit">Submit form</button>
     </form>
+    <input
+      type="text"
+      name="outside_text"
+      form="main_form"
+      id="out_input"
+      required
+    />
+    <!-- required makes mandatory to fill the input u put it on  -->
 
     <datalist id="names">
       <option>Mark Rober</option>
