@@ -1,0 +1,23 @@
+
+.flex-container{
+  display: flex;
+}
+
+.flex-item-1{
+  border: 5px solid black;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(193, 225, 12);
+}
+.flex-item-2{  
+  border: 5px solid black;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(21, 136, 63);
+}
+.flex-item-3{
+  border: 5px solid black;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(43, 94, 222);
+}
