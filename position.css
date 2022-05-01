@@ -1,0 +1,27 @@
+.box-1{
+  border: 5px solid black;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 2px;
+  position: absolute;
+  z-index: 4;
+}
+.box-2{
+  border: 5px solid black;
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  margin: 11px;
+  position: absolute;
+  z-index: 3;
+}
+.box-3{
+  border: 5px solid black;
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  margin: 21px;
+  position: absolute;
+  z-index: 2;
+}
